@@ -45,12 +45,8 @@ public class Ball
         return new Ellipse2D.Double(x-radius, y-radius, radius*2, radius*2);
     }
 
-    public Color getColor()
-    {
-        return Color.YELLOW;
-    }
-
-    //отслеживание движения и столкновения мячиков:
+    //отслеживание движения и столкновения мячиков:к координате, прибавляется величина скорости,
+    //которая задается как случайная величина, а к значению базового радиуса добавляется его приращение
     public void moveBall(BallComponent ballComponent)
     {
         x+=dx;
